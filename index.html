@@ -1,35 +1,47 @@
+<!DOCTYPE HTML>
 <html>
-<body>
+<head>
+	
+	<script src="phonegap.js"></script>
+	<script src="barcodescanner.js"></script>
 
+	<script type="type/javascript">
+		//var scanner = window.PhoneGap.require("cordova/plugin/BarcodeScanner");
+
+		function ScanCode() {
+			window.plugins.barcodeScanner.scan( function(result) {
+					alert("We got a barcode\n" +
+							  "Result: " + result.text + "\n" +
+							  "Format: " + result.format + "\n" +
+							  "Cancelled: " + result.cancelled);
+				}, function(error) {
+					alert("Scanning failed: " + error);
+				}
+			);
+		}
+		
+		//$("#a_scan").click(scanCode);
+	</script>
+
+</head>
+<body>
+<!--
 <div class='header'><h1>Home</h1></div>
 <div class='search-view'>
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul>
-</div>
+</div>-->
 
 
+<!--
 
-<script src="phonegap.js"></script>
-<script src="barcodescanner.js"></script>
 <script src="lib/jquery-1.8.2.min.js"></script>
 <script src="js/storage/memory-store.js"></script>
 <script src="js/main.js"></script>
 
-<script type="type/javascript">
-	var scanner = window.PhoneGap.require("cordova/plugin/BarcodeScanner");
-
-	function scanCode() {
-		scanner.scan( function (result) { 
-			alert("We got a barcode\n" + "Result: " + result.text + "\n" + "Format: " + result.format + "\n" + "Cancelled: " + result.cancelled); 
-		}, function (error) { 
-			alert("Scanning failed: " + error); 
-		});
-	}
+-->
 	
-	$("#a_scan").click(scanCode);
-</script>
-	
-	<a href="#" id="a_scan">Scan Code</a>   
+	<a href="#" id="a_scan" onclick="javascript:scanCode();">Scan Code</a>   
 
 </body>
 </html>
