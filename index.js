@@ -60,7 +60,7 @@ if (args.format == "QR_CODE") {
 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
 }
 */
-                document.getElementById("info").innerHTML = args.text;
+                document.getElementById("info").innerHTML = "Barcode gelezen: " + args.text;
                 console.log(args);
         });
         } catch (ex) {
