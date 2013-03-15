@@ -4,14 +4,14 @@
         id = "com.phonegap.hello-world"
         version = "2.0.0">
  
-    <name>Employee Directory</name>
+    <name>Artikelenbeheersysteem</name>
  
     <description>
-        A simple employee directory application
+        Artikelenbeheersysteem VTI Roeselare
     </description>
  
-    <author href="http://coenraets.org" email="ccoenraets@gmail.com">
-        Christophe Coenraets
+    <author href="http://www.vtiroeselare.be" email="stijn.vandewalle@vtir.be">
+        Stijn Vandewalle
     </author>
  
     <preference name="phonegap-version" value="2.2.0" />
